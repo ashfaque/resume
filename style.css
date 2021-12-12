@@ -1,0 +1,215 @@
+/* Preloader */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-top-color: #3498db;
+  z-index: 1001;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-top-color: #e74c3c;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-top-color: #f9c922;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+
+    transform: rotate(360deg);
+  }
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);
+
+  transform: translateX(-100%);
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);
+
+  transform: translateX(100%);
+
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+
+  transform: translateY(-100%);
+
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}
+
+/* Scroll Progress Bar */
+#pbar {
+  position: fixed;
+  top: 60px;
+  width: 0;
+  height: 4px;
+  z-index: 2;
+  background: hsl(14, 100%, 62%);
+  animation: progress 1s linear infinite;
+  border-radius: 5px;
+}
+
+/* Cursor */
+body {
+  cursor: url(https://cdn.custom-cursor.com/db/cursor/32/Orange_cursor.png), default !important;
+}
+button,
+a,
+.btnScrollToTop {
+  cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Orange_pointer.png), default !important;
+}
+
+/* Scroll Up Button */
+.btnScrollToTop {
+  position: fixed;
+  right: -100px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: hsl(14, 100%, 62%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  outline: none;
+  transition: 0.5s;
+}
+
+.btnScrollToTop:hover {
+  background: hsl(14, 100%, 53%);
+}
+
+.btnScrollToTop.show {
+  right: 10px;
+}
+
+/* Header section */
+.home {
+  height: 100vh;
+}
+
+.home .home-content {
+  margin-top:60px;
+}
+
+
+.bgblue {
+  background-color: #1a2238;
+}
+.bgbluehover {
+  background-color: #1a2238;
+}
+.bgbluehover:hover {
+  background-color: #ff6a3d;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #212529;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(14, 100%, 62%);
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(14, 100%, 53%);
+  border-radius: 100vw;
+}
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: hsl(14, 100%, 62%) #212529;
+    scrollbar-width: thin;
+  }
+}

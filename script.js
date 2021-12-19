@@ -34,4 +34,25 @@ window.onload = function () {
       behavior: "smooth",
     });
   };
+
+  // Navbar Transparent & solid colored when scrolling
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 50) {
+      $("nav").removeClass("bg-transparent");
+      $("nav").addClass("navbar-dark");
+    } else {
+      $("nav").addClass("bg-transparent");
+      $("nav").removeClass("navbar-dark");
+      // $(document).getElementById("topnavbar").style.color = "#1a2238 !important";
+    }
+  });
+
+  // Activate navbar links after clicking on it
+  $(".list .nav-item .nav-link").click(function(){
+      $('a.active').removeClass('active');
+      $(this).addClass('active');
+    // The code below is not working for some reason. It does the exact same thing as the code above:-
+    // $(this).addClass("active").siblings().removeClass("active");
+  });
+
 };

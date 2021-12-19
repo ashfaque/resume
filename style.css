@@ -131,7 +131,7 @@
 /* Scroll Progress Bar */
 #pbar {
   position: fixed;
-  top: 60px;
+  top: 60px;    /* Adjust position of scroll progress bar */
   width: 0;
   height: 4px;
   z-index: 2;
@@ -176,12 +176,52 @@ a,
 
 /* Header section */
 .home {
+  display: flex;
+  background: url("/images/banner.jpg") no-repeat center;
   height: 100vh;
+  color: #111;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .home .home-content {
   margin-top:60px;
 }
+
+
+.navbar-default {
+  color: #000000 !important;
+}
+.navbar{
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-item {
+  color: #1a2238;
+  font-size: 18px;
+  font-weight: 400px !important;
+}
+
+.navbar .navbar-brand:hover
+ {
+  color: hsl(14, 100%, 62%);
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover
+ {
+  color: hsl(14, 100%, 62%);
+}
+
+
+.navbar .navbar-nav .nav-item .nav-link.active
+{
+  color: hsl(14, 100%, 53%)
+}
+
+
+
+
 
 
 .bgblue {

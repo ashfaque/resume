@@ -16,6 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <!-- <script src="autoActivateNavItems.js"></script> -->
     <title>Ashfaque Alam Resume</title>
   </head>
   <body>
@@ -27,19 +28,20 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bgblue fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bgblue bg-transparent fixed-top" id="topnavbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"> <img class="rounded-circle img-fluid" src="images/32pxprofilePic.png" alt="Profile Photo" /> Ashfaque Alam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto mx-5">
+          <ul class="list navbar-nav ms-auto mx-5">
             <li class="nav-item"><a class="nav-link" aria-current="page" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#workexp">Works Experience</a></li>
             <li class="nav-item"><a class="nav-link" href="#edu">Education</a></li>
             <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
             <li class="nav-item"><a class="nav-link" href="#works">Recent Works</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -54,18 +56,18 @@
     </span>
 
     <!-- <div class="mt-5"> -->
-      <!-- Top Header -->
-      <div class="jumbotron-fluid bgblue home scroll-active" id="home">
-        <header class="home-content text-light py-5">
+      <!-- Banner -->
+      <div class="jumbotron-fluid home scroll-active page-section" id="home">
+        <header class="home-content text-dark py-1">
           <div class="container">
             <div class="row">
               <!-- Profile Picture -->
-              <div class="col-md-3 text-left text-md-center my-2">
+              <div class="col-md-8 text-left text-md-center my-2">
                 <img class="rounded-circle img-fluid" src="images/profilePic.png" alt="Profile Photo" />
               </div>
 
               <!-- Personal Info -->
-              <div class="col-md-9">
+              <div class="col-md-4">
                 <h1>Ashfaque Alam</h1>
                 <h5>Web Developer</h5>
                 <p class="border-top pt-3">I’ve always been a great problem solver and a technophile obsessed with the latest devices. I’m familiar with a variety of programming languages, including HTML, CSS, Bootstrap, PHP, Java, Python, C++, SQL, but I’m always adding new skills to my repertoire.</p>
@@ -108,7 +110,7 @@
       <main class="container">
         <!-- This row contains `Work Experience` & `Education` -->
         <div class="row">
-          <div class="col-md-6 mb-5" id="workexp">
+          <div class="col-md-6 mb-5 page-section" id="workexp">
             <!-- Work Experience -->
             <h2 class="mb-5">Work Experience</h2>
             <ul>
@@ -126,7 +128,7 @@
             </ul>
           </div>
 
-          <div class="col-md-6 mb-5" id="edu">
+          <div class="col-md-6 mb-5 page-section" id="edu">
             <!-- Education -->
             <h2 class="mb-5">Education</h2>
             <ul>
@@ -161,7 +163,7 @@
         <!-- This row contains `Skills` & `Recent Works` -->
         <div class="row">
           <!-- Skills in 1st column-->
-          <div class="col-md-6 mb-5" id="skills">
+          <div class="col-md-6 mb-5 page-section" id="skills">
             <h2 class="mb-5">Skills</h2>
             <div class="progress mb-4" style="height: 20px">
               <div class="progress-bar bgbluehover text-left pl-2 d-flex justify-content-start align-items-start px-3" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">Bootstrap</div>
@@ -192,7 +194,7 @@
           </div>
 
           <!-- Recent Work in 2nd column -->
-          <div class="col-md-6" id="works">
+          <div class="col-md-6 page-section" id="works">
             <h2 class="mb-5">Recent Works</h2>
             <div class="row">
               <div class="col-md-6 mb-3">
@@ -210,7 +212,7 @@
         </div>
       </main>
 
-      <footer class="bg-dark text-white-50 text-center mt-5 p-3">
+      <footer class="bg-dark text-white-50 text-center mt-5 p-3 page-section" id="contact">
         &copy; 2021-2022 Ashfaque Alam -
         <a href="https://github.com/ashfaque" class="text-white-50" target="_blank"
           ><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-github mx-1" viewbox="0 0 16 16">
